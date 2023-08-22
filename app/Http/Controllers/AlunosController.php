@@ -17,7 +17,7 @@ public function index()
 
     public function show(Aluno $aluno)
     {
-        return response()->json($aluno);
+        return response()->json($aluno, 200);
     }
 
     public function create(Request $request)
