@@ -29,7 +29,7 @@ class MateriaisController extends Controller
     public function index()
     {
         $materiais = Material::all();
-        return response()->json($materiais);
+        return response()->json($materiais, 200);
     }
 
     public function download($id)

@@ -12,12 +12,12 @@ class AdminsController extends Controller
     public function index()
     {
         $admins = Admin::all();
-        return response()->json($admins);
+        return response()->json($admins, 200);
     }
 
     public function show(Admin $admin)
     {
-        return response()->json($admin);
+        return response()->json($admin, 200);
     }
 
     public function create(Request $request)
@@ -79,7 +79,7 @@ class AdminsController extends Controller
     public function delete(Admin $admin)
     {
         $admin->delete();
-        
+
         return response()->json(null, 204);
     }
 }

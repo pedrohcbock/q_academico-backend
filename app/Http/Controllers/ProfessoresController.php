@@ -12,12 +12,12 @@ class ProfessoresController extends Controller
     public function index()
     {
         $professores = Professor::all();
-        return response()->json($professores);
+        return response()->json($professores, 200);
     }
 
     public function show(Professor $professor)
     {
-        return response()->json($professor);
+        return response()->json($professor, 200);
     }
 
     public function create(Request $request)

@@ -10,12 +10,12 @@ class TurmasController extends Controller
     public function index()
     {
         $turmas = Turma::all();
-        return response()->json($turmas);
+        return response()->json($turmas, 200);
     }
 
     public function show(Turma $turma)
     {
-        return response()->json($turma);
+        return response()->json($turma, 200);
     }
 
     public function create(Request $request)

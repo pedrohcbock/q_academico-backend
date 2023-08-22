@@ -13,7 +13,7 @@ class NotasController extends Controller
         $alunoId = Auth::guard('aluno')->id();
         $notas = Nota::where('idAluno', $alunoId)->get();
 
-        return response()->json($notas);
+        return response()->json($notas, 200);
     }
 
     public function create(Request $request)

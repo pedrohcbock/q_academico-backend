@@ -10,12 +10,12 @@ class MateriasController extends Controller
     public function index()
     {
         $materias = Materia::all();
-        return response()->json($materias);
+        return response()->json($materias, 200);
     }
 
     public function show(Materia $materia)
     {
-        return response()->json($materia);
+        return response()->json($materia, 200);
     }
 
     public function create(Request $request)

@@ -29,7 +29,7 @@ class DocumentosController extends Controller
     public function index()
     {
         $documentos = Documento::all();
-        return response()->json($documentos);
+        return response()->json($documentos, 200);
     }
 
     public function download($id)

@@ -10,12 +10,12 @@ class CursosController extends Controller
     public function index()
     {
         $cursos = Curso::all();
-        return response()->json($cursos);
+        return response()->json($cursos, 200);
     }
 
     public function show(Curso $curso)
     {
-        return response()->json($curso);
+        return response()->json($curso, 200);
     }
 
     public function create(Request $request)

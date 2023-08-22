@@ -12,7 +12,7 @@ class AlunosController extends Controller
 public function index()
     {
         $alunos = Aluno::all();
-        return response()->json($alunos);
+        return response()->json($alunos, 200);
     }
 
     public function show(Aluno $aluno)
